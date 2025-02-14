@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
 function MeteoOdierno({ meteo }) {
+  /*Stessa roba di PrevisioniFuture, se non ci sono previsioni disponibili, mi ritorna NULL per evitare che si rompa qualcosa  */
   if (!meteo) return null;
 
   return (
@@ -13,7 +13,8 @@ function MeteoOdierno({ meteo }) {
         <div className="border border-black text-dark pt-2 opaco1">
           <div className="details">
             <h2>
-              {meteo.city} ({new Date(meteo.date).toLocaleDateString()})
+              {/* Formatto anche qui la data locale in modo da non mostrare direttamente la data fornita dall'API, poichè sarebbe incomprensibile */}
+              {meteo.city} <strong>OGGI</strong>
             </h2>
             <h4>Temperatura: {meteo.temp}°C</h4>
             <h4>Vento: {meteo.wind} m/s</h4>
@@ -21,6 +22,7 @@ function MeteoOdierno({ meteo }) {
           </div>
           <div>
             <h4>Stato: {meteo.description}</h4>
+            {/* Anche qui ho avuto la necessità di migliorare la risoluzione dell'immagine relativa allo stato del meteo, in questo caso x4 perchè altrimenti sarebbe venuto sgranato */}
             <img src={`https://openweathermap.org/img/wn/${meteo.icon}@4x.png`} alt="Icona meteo" />
           </div>
         </div>
