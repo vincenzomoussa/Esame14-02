@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(/src/assets/img/globe-earth-weather-meteorology-cloud-rainbow-vector-11583753.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.custom-hover:hover {
+  scale: 1.1;
+}
+.custom-shadow {
+  box-shadow: 15px 5px rgba(0, 0, 0, 0.3);
+}
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+img {
+  width: 300px;
+}
+
+.opaco {
+  background-color: rgba(0, 183, 255, 0.5);
+}
+
+.opaco1 {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.opaco2 {
+  background-color: rgba(0, 183, 255, 0.5);
+}
